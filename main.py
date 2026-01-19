@@ -8,7 +8,7 @@ For this question, letters are NOT case-sensitive, for example, "LEVeL" is a pal
 def is_palindrome(text):
     # Change here so it works correctly
 
-    return False
+    return True
 
 
 if __name__ == '__main__':
@@ -19,7 +19,7 @@ if __name__ == '__main__':
                   ('motor', False),
                   ('No lemon no melon', True),
                   ('No No', False),
-                  ('202601', True),
+                  ('2026202', True),
                   ('100P', False),
                   ('Do geese see God', True)]
     for test_text, expected in test_cases:
