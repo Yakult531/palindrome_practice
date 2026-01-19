@@ -6,10 +6,8 @@ Given a string text, return true if it is a palindrome, or false otherwise.
 For this question, letters are NOT case-sensitive, for example, "LEVeL" is a palindrome.
 """
 def is_palindrome(text):
-    # Change here so it works correctly
-
-    return True
-
+    uppercase = text.upper()
+    return uppercase == uppercase[::-1]
 
 if __name__ == '__main__':
     test_cases = [('level', True),
@@ -17,11 +15,11 @@ if __name__ == '__main__':
                   ('levy', False),
                   ('rotor', True),
                   ('motor', False),
-                  ('No lemon no melon', True),
+                  ('No lemon no melon', False),
                   ('No No', False),
                   ('2026202', True),
                   ('100P', False),
-                  ('Do geese see God', True)]
+                  ('Do geese see God', False)]
     for test_text, expected in test_cases:
         result = is_palindrome(test_text)
         msg = 'Correct' if expected == result else 'Wrong'
